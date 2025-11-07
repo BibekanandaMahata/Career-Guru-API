@@ -8,69 +8,13 @@ CORS(app) # This will enable CORS for all routes
 def welcome():
     return "Career Guru API is running successfully."
 
-@app.route("/bgmi_players")
-def test():
-    return """Professional BGMI Players
-Jonathan Gaming
+@app.route("/home")
+def home():
+    return "This is the home page."
 
-Goblin
-
-Sc0utOP
-
-Mavi
-
-Omega
-
-AkshaT
-
-ClutchGod
-
-Ninja JOD
-
-Snax
-
-Vexe
-
-Creative BGMI Player Name Ideas
-Shadow Hunter
-
-Blaze Phantom
-
-Mystic Warrior
-
-Rogue Titan
-
-Venom Striker
-
-Thunder Ghost
-
-Inferno Slayer
-
-Phantom Reaper
-
-Night Stalker
-
-Silent Predator
-
-Steel Viper
-
-Chaos Bringer
-
-Storm Breaker
-
-Frost Venom
-
-Toxic Sniper
-
-Dark Executioner
-
-Lunar Assassin
-
-Nova Killer
-
-Iron Sentinel
-
-Eclipse Warden"""
+from controller.user_controller import *
+from controller.product import *
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
+
